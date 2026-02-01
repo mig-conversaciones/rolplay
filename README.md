@@ -1,12 +1,12 @@
-# RolPlay EDU - Plataforma Gamificada SENA
+RolPlay EDU - Plataforma Gamificada SENA
 
-Plataforma educativa gamificada para el desarrollo de competencias transversales en aprendices del SENA, con simulaciones interactivas y generación de escenarios asistida por IA (Gemini).
+Plataforma educativa gamificada para el desarrollo de competencias transversales en aprendices del SENA, con simulaciones interactivas y generación de escenarios asistida por IA (Puter.js).
 
 ## 🎯 Características Principales
 
 - ✅ Sistema de autenticación con roles (Admin, Instructor, Aprendiz)
 - ✅ Gestión de escenarios de simulación
-- ✅ Generación de escenarios con IA (Gemini)
+- ✅ Generación de escenarios con IA (Puter.js)
 - ✅ Análisis de programas de formación (documento)
 - ✅ Sistema de logros y gamificación
 - ✅ Seguimiento de progreso de aprendices
@@ -27,18 +27,12 @@ rolplay/
 │   └── views/             # Vistas (PHP templates)
 ├── config/                # Configuración
 │   ├── app.php           # Configuración general
-│   ├── database.php      # Configuración de BD
-│   └── gemini.php        # Configuración de Gemini AI
+│   └── database.php      # Configuración de BD
 ├── database/             # Base de datos
 │   ├── migrations/       # Migraciones SQL
 │   ├── seeders/          # Datos iniciales
 │   ├── schema.sql        # Esquema completo
 │   └── seed_scenarios.sql # Escenarios base
-├── docs/                 # Documentación
-│   ├── ADMINISTRADOR_README.md
-│   ├── FUNCIONALIDADES_IMPLEMENTADAS.md
-│   ├── SRS_RolPlay_EDU.md
-│   └── ...
 ├── public/               # Document Root (punto de entrada web)
 │   ├── .htaccess        # Configuración Apache
 │   ├── index.php        # Front controller
@@ -109,13 +103,6 @@ DB_PORT=3306
 DB_DATABASE=rolplay_edu
 DB_USERNAME=tu_usuario
 DB_PASSWORD=tu_contraseña_segura
-
-# Gemini AI (Generación de escenarios)
-GEMINI_API_KEY=tu_api_key_de_gemini
-GEMINI_BASE_URL=https://generativelanguage.googleapis.com/v1beta
-GEMINI_MODEL=gemini-2.0-flash-exp
-GEMINI_MAX_TOKENS=2000
-GEMINI_TEMPERATURE=0.7
 ```
 
 ### 4. Crear la Base de Datos
@@ -229,8 +216,6 @@ El sistema incluye un usuario administrador por defecto:
 
 ⚠️ **IMPORTANTE**: Cambia esta contraseña inmediatamente en producción.
 
-Para crear administradores adicionales, consulta la documentación en `docs/ADMINISTRADOR_README.md`.
-
 ## 🔑 Roles del Sistema
 
 | Rol | Descripción | Registro Público |
@@ -246,20 +231,24 @@ Para crear administradores adicionales, consulta la documentación en `docs/ADMI
 - **[SRS - Especificación de Requisitos](docs/SRS_RolPlay_EDU.md)**: Documentación técnica completa
 - **[Guía Visual de Branding](docs/GUIA_VISUAL_BRANDING.md)**: Colores y estilos SENA 2025
 
-## 🤖 Integración con Gemini AI
+(Nota: Los archivos de documentación se encuentran en el historial del repositorio si fueron eliminados en la limpieza).
 
-La plataforma utiliza Google Gemini para:
+## 🤖 Integración con IA (Puter.js)
 
-1. **Análisis de Programas**: Extrae competencias transversales de PDFs de programas SENA
-2. **Generación de Escenarios**: Crea escenarios de simulación personalizados
+La plataforma utiliza **Puter.js** para potenciar las funcionalidades de Inteligencia Artificial de forma gratuita y segura desde el navegador.
 
-### Servicios Implementados:
+### Funcionalidades Potenciadas por AI:
 
-- `app/services/GeminiAIService.php` - Cliente de la API de Gemini
-- `app/services/ProgramAnalysisService.php` - Análisis de programas
-- `app/services/ScenarioGeneratorService.php` - Generación de escenarios
+1. **Análisis de Programas**: Extrae competencias transversales de PDFs de programas SENA.
+2. **Generación de Escenarios**: Crea escenarios de simulación personalizados y dinámicos.
+3. **Feedback Inteligente**: Proporciona retroalimentación contextual a las decisiones de los aprendices.
 
-Si no configuras `GEMINI_API_KEY`, el sistema funcionará pero con funcionalidad limitada en IA.
+### Stack de IA:
+
+- **Frontend**: `Puter.js` (Biblioteca cliente)
+- **Backend**: Servicios auxiliares en `app/services/` para orquestación.
+
+No se requiere configuración de API Keys en el backend para la funcionalidad básica de Puter.js, ya que opera del lado del cliente.
 
 ## 🧪 Pruebas
 
@@ -328,7 +317,6 @@ Este proyecto fue desarrollado como parte de un proyecto de formación del SENA.
 Para reportar problemas o solicitar nuevas funcionalidades:
 
 - **Email**: soporte@rolplayedu.com
-- **Documentación**: Ver carpeta `docs/`
 - **Issues**: Crear issue en el repositorio
 
 ---
