@@ -6,8 +6,10 @@ use App\Core\Env;
 use App\Core\Router;
 
 // Basic error handling for development
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+// Basic error handling
+$debug = ($_ENV['APP_DEBUG'] ?? 'false') === 'true';
+error_reporting($debug ? E_ALL : 0);
+ini_set('display_errors', $debug ? '1' : '0');
 ini_set('default_charset', 'UTF-8');
 
 if (!headers_sent()) {

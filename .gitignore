@@ -75,7 +75,6 @@ _ide_helper.php
 
 # Composer
 composer.phar
-composer.lock
 
 # Windows
 desktop.ini

@@ -17,6 +17,12 @@ abstract class Controller
         }
 
         // Extraer variables para la vista
+        if (session_status() === PHP_SESSION_ACTIVE) {
+            if (empty($_SESSION['csrf_token'])) {
+                $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+            }
+            $data['csrf_token'] = $_SESSION['csrf_token'];
+        }
         extract($data);
 
         // Capturar contenido de la vista

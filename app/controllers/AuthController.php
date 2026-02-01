@@ -44,6 +44,12 @@ final class AuthController extends Controller
             'role' => 'required',
         ]);
 
+        // Security: Whitelist allowed roles
+        $allowedRoles = ['aprendiz', 'instructor'];
+        if (!in_array($data['role'], $allowedRoles, true)) {
+            $data['role'] = 'aprendiz'; // Default fallback
+        }
+
         if (!empty($errors)) {
             $this->view('auth/register', [
                 'title' => 'Crear cuenta',

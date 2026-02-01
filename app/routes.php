@@ -8,8 +8,8 @@ $router->get('/', 'AuthController', 'showLogin');
 // Scenarios (aprendiz)
 $router->get('/scenarios', 'ScenarioController', 'index');
 $router->get('/scenarios/{id}', 'ScenarioController', 'show');
-$router->post('/api/sessions/start/{id}', 'PlayerController', 'startSession');
-$router->post('/api/decisions', 'PlayerController', 'recordDecision');
+$router->post('/api/sessions/start/{id}', 'PlayerController', 'startSession')->middleware('CsrfMiddleware');
+$router->post('/api/decisions', 'PlayerController', 'recordDecision')->middleware('CsrfMiddleware');
 
 // Perfil (aprendiz)
 $router->get('/profile', 'ProfileController', 'show');
@@ -79,7 +79,7 @@ $router->get('/admin/logs', 'AdminController', 'logs');
 
 // Auth
 $router->get('/login', 'AuthController', 'showLogin');
-$router->post('/login', 'AuthController', 'login');
+$router->post('/login', 'AuthController', 'login')->middleware('CsrfMiddleware');
 $router->get('/register', 'AuthController', 'showRegister');
-$router->post('/register', 'AuthController', 'register');
-$router->post('/logout', 'AuthController', 'logout');
+$router->post('/register', 'AuthController', 'register')->middleware('CsrfMiddleware');
+$router->post('/logout', 'AuthController', 'logout')->middleware('CsrfMiddleware');

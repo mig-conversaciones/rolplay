@@ -29,6 +29,7 @@ $old = $old ?? [];
 
             <!-- Formulario -->
             <form method="post" action="<?= Router::url('/login') ?>" class="space-y-6">
+                <input type="hidden" name="_token" value="<?= $csrf_token ?>">
                 <!-- Email -->
                 <div>
                     <label for="email" class="block text-sm font-medium text-neu-text-main mb-2">

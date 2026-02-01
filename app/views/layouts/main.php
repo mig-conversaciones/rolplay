@@ -247,6 +247,7 @@ if ($user) {
                     </a>
 
                     <form method="post" action="<?= Router::url('/logout') ?>" class="inline">
+                        <input type="hidden" name="_token" value="<?= $csrf_token ?>">
                         <button type="submit" class="text-gray-600 hover:text-red-600 font-medium transition duration-300">
                             <i class="fas fa-sign-out-alt mr-1"></i> Salir
                         </button>
@@ -342,6 +343,7 @@ if ($user) {
                 </div>
 
                 <form method="post" action="<?= Router::url('/logout') ?>">
+                    <input type="hidden" name="_token" value="<?= $csrf_token ?>">
                     <button type="submit" class="w-full text-left py-2 px-4 text-red-600 hover:bg-red-50 rounded-lg transition duration-300">
                         <i class="fas fa-sign-out-alt mr-2"></i> Cerrar Sesión
                     </button>

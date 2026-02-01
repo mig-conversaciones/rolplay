@@ -29,6 +29,7 @@ $old = $old ?? [];
 
             <!-- Formulario -->
             <form method="post" action="<?= Router::url('/register') ?>" class="space-y-5">
+                <input type="hidden" name="_token" value="<?= $csrf_token ?>">
                 <!-- Nombre -->
                 <div>
                     <label for="name" class="block text-sm font-medium text-neu-text-main mb-2">
