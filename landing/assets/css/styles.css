@@ -1,0 +1,164 @@
+:root {
+  /* Neumorphism Palette */
+  --bg-color: #e0e5ec;
+  --text-main: #4d5561;
+  --text-light: #a3b1c6;
+  --shadow-light: #ffffff;
+  --shadow-dark: #a3b1c6;
+  
+  /* Brand Colors */
+  --sena-green: #39A900;
+  --sena-green-dark: #007832;
+  --sena-orange: #FDC300;
+  
+  /* Dimensions */
+  --radius-main: 20px;
+  --radius-sm: 12px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Outfit', sans-serif; /* Modern, geometric sans */
+}
+
+/* Base Neumorphism Class */
+.neu-flat {
+  border-radius: var(--radius-main);
+  background: var(--bg-color);
+  box-shadow: 9px 9px 16px var(--shadow-dark), 
+              -9px -9px 16px var(--shadow-light);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.neu-nav {
+    background: rgba(224, 229, 236, 0.85);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 10px rgba(163, 177, 198, 0.4);
+}
+
+/* Pressed State (Inset) */
+.neu-pressed, .neu-btn:active {
+  background: var(--bg-color);
+  box-shadow: inset 6px 6px 10px var(--shadow-dark), 
+              inset -6px -6px 10px var(--shadow-light);
+}
+
+/* Convex (Protruding) */
+.neu-convex {
+  background: linear-gradient(145deg, #f0f5fd, #cacfdo);
+  box-shadow: 9px 9px 16px var(--shadow-dark), 
+              -9px -9px 16px var(--shadow-light);
+}
+
+/* Concave (Dented) */
+.neu-concave {
+  background: linear-gradient(145deg, #cacfd0, #f0f5fd);
+  box-shadow: 9px 9px 16px var(--shadow-dark), 
+              -9px -9px 16px var(--shadow-light);
+}
+
+/* Action Buttons */
+.neu-btn-primary {
+  background: linear-gradient(145deg, #3ddb00, #339800);
+  color: white;
+  border: none;
+  font-weight: 600;
+  box-shadow: 6px 6px 12px rgba(57, 169, 0, 0.4),
+              -6px -6px 12px #ffffff;
+  transition: all 0.2s ease;
+}
+
+.neu-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 8px 8px 16px rgba(57, 169, 0, 0.5),
+              -8px -8px 16px #ffffff;
+}
+
+.neu-btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: inset 4px 4px 8px rgba(0, 80, 0, 0.4),
+              inset -4px -4px 8px rgba(90, 255, 30, 0.2);
+}
+
+.neu-icon-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+.neu-icon-btn:hover {
+  color: var(--sena-green);
+}
+
+/* Cards */
+.neu-card {
+  transition: transform 0.3s ease;
+}
+.neu-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Typography Enhancements */
+.text-neu-emboss {
+  color: rgba(0,0,0,0.1);
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.5),
+               -2px -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Form Elements */
+.neu-input {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  background: var(--bg-color);
+  box-shadow: inset 5px 5px 10px var(--shadow-dark), 
+              inset -5px -5px 10px var(--shadow-light);
+  color: var(--text-main);
+  outline: none;
+}
+
+.neu-input:focus {
+  box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+              inset -2px -2px 5px var(--shadow-light),
+              0 0 5px rgba(57, 169, 0, 0.3);
+}
+
+/* Floating Elements */
+.floating-element {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Custom Shape Divider */
+.custom-shape-divider-bottom-1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1 svg {
+    position: relative;
+    display: block;
+    width: calc(186% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1 .shape-fill {
+    fill: #e0e5ec;
+}

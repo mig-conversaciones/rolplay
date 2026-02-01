@@ -1,0 +1,95 @@
+# RolPlay EDU - .gitignore
+
+# Documentación antigua (ya archivada)
+documentacion_antigua/
+
+# Archivos de entorno
+.env
+.env.local
+.env.production
+
+# Dependencias
+/vendor/
+node_modules/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+logs/
+storage/logs/
+
+# Cache
+storage/cache/
+*.cache
+
+# Uploads temporales (mantener estructura pero no archivos)
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Base de datos (excepto los archivos iniciales del proyecto)
+*.sqlite
+*.db
+# Mantener estos archivos SQL del proyecto:
+!database/schema.sql
+!database/seed_scenarios.sql
+!database/seeders/*.sql
+!database/migrations/*.sql
+
+# Archivos compilados
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Backups
+*.bak
+*.backup
+*.old
+
+# Archivos grandes de audio/video (excepto los del proyecto)
+*.wav
+*.avi
+*.mov
+*.flv
+
+# Configuraciones locales
+config/local.php
+
+# PHPStorm
+.phpstorm.meta.php
+_ide_helper.php
+
+# Composer
+composer.phar
+composer.lock
+
+# Windows
+desktop.ini
+
+# Claude AI (herramienta de desarrollo)
+.claude/
+
+# Backups del proyecto
+*_backup_*/
+rolplay_backup_*/
+
+# Archivos de despliegue local
+deploy_local.sh
+
+# Uploads de programas PDF
+storage/uploads/*
+!storage/uploads/.gitkeep

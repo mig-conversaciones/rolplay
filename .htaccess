@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Serve static files from public/ when project root is the document root
+    RewriteRule ^assets/(.*)$ public/assets/$1 [L,NC]
+    RewriteRule ^uploads/(.*)$ public/uploads/$1 [L,NC]
+    RewriteRule ^reports/(.*)$ public/reports/$1 [L,NC]
+
+    # If already in /public, do not rewrite (avoid loops)
+    RewriteCond %{REQUEST_URI} !/public/ [NC]
+    RewriteRule ^$ public/index.php [L]
+
+    # Route everything else through public/index.php
+    RewriteCond %{REQUEST_URI} !/public/ [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/index.php [QSA,L]
+</IfModule>

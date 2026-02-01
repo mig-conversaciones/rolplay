@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RolPlay EDU | Simulación de Habilidades Blandas</title>
+
+    <!-- Fonts: Outfit for Modern/Tech feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- External Libs -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Neumorphism Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
+</head>
+
+<body class="antialiased min-h-screen relative overflow-x-hidden selection:bg-green-200 selection:text-green-900">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 px-6 py-4 neu-nav">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="assets/img/logo.png" alt="RolPlay EDU Logo" class="h-10 w-auto">
+                <span class="text-xl font-bold tracking-tight text-gray-700">RolPlay <span
+                        class="text-green-600">EDU</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#features" class="text-gray-500 hover:text-gray-800 font-medium transition">Beneficios</a>
+                <a href="#demo" class="text-gray-500 hover:text-gray-800 font-medium transition">Pruébalo</a>
+                <a href="#testimonials" class="text-gray-500 hover:text-gray-800 font-medium transition">Historias</a>
+                <button class="neu-btn-primary px-6 py-2.5 rounded-full text-sm font-bold tracking-wide">
+                    INICIAR SESIÓN
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1 space-y-8">
+                <!-- Badge -->
+                <div
+                    class="inline-flex items-center px-4 py-2 rounded-full neu-concave text-xs font-bold text-gray-500 tracking-wider uppercase mb-2">
+                    <span class="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
+                    Versión 2026 Disponible
+                </div>
+
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight text-gray-700 text-neu-emboss">
+                    <span
+                        class="block text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-500">Practica
+                        la realidad</span>
+                    <span class="text-green-600">sin arriesgar tu futuro.</span>
+                </h1>
+
+                <p class="text-lg text-gray-500 max-w-lg leading-relaxed">
+                    Las empresas no despiden por falta de conocimientos técnicos, sino por falta de <strong>habilidades
+                        blandas</strong>. Entrena tu liderazgo y comunicación con simulaciones de IA antes de tu primera
+                    entrevista.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="./online"
+                        class="neu-btn-primary px-8 py-4 rounded-full text-lg shadow-xl flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-play"></i>
+                        Probar Simulador Gratis
+                    </a>
+                    <a href="./offline"
+                        class="px-8 py-4 rounded-full text-gray-600 font-bold neu-flat hover:text-green-600 transition flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-youtube"></i>
+                        Ver cómo funciona
+                    </a>
+                </div>
+
+                <!-- Trust signals -->
+                <div class="pt-8 flex items-center gap-4 text-gray-400 text-sm font-medium">
+                    <span>Usado por aprendices en:</span>
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-building-columns text-xl hover:text-gray-600 transition" title="SENA"></i>
+                        <i class="fa-solid fa-graduation-cap text-xl hover:text-gray-600 transition"
+                            title="Universidades"></i>
+                        <i class="fa-solid fa-briefcase text-xl hover:text-gray-600 transition" title="Empresas"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual / 3D Abstract Representation -->
+            <div class="order-1 lg:order-2 relative flex justify-center">
+                <div class="relative w-full max-w-lg aspect-square">
+                    <div class="absolute inset-0 bg-gray-200 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+                    <!-- Main Card Floating -->
+                    <div class="absolute inset-4 neu-flat rounded-3xl p-8 transform rotate-2 floating-element z-10">
+                        <div class="flex justify-between items-center mb-6">
+                            <div class="h-3 w-24 bg-gray-200 rounded-full neu-concave"></div>
+                            <div
+                                class="h-8 w-8 rounded-full bg-red-400 neu-flat flex items-center justify-center text-white text-xs font-bold">
+                                !</div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-4 w-3/4 bg-gray-300 rounded-full"></div>
+                            <div class="h-4 w-1/2 bg-gray-300 rounded-full"></div>
+                            <div
+                                class="h-32 w-full bg-gray-100 rounded-xl neu-concave mt-6 p-4 flex items-center justify-center text-gray-400 text-sm italic">
+                                "El cliente está furioso. ¿Qué haces?"
+                            </div>
+                        </div>
+                        <!-- Action Buttons UI -->
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div
+                                class="h-12 rounded-xl neu-flat flex items-center justify-center text-green-600 font-bold text-sm cursor-pointer hover:scale-95 transition">
+                                Calmarlo</div>
+                            <div
+                                class="h-12 rounded-xl neu-flat flex items-center justify-center text-red-500 font-bold text-sm cursor-pointer hover:scale-95 transition">
+                                Ignorarlo</div>
+                        </div>
+                    </div>
+
+                    <!-- Decor Elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 neu-convex rounded-2xl flex items-center justify-center z-20 floating-element"
+                        style="animation-delay: 1s;">
+                        <i class="fa-solid fa-brain text-4xl text-purple-500"></i>
+                    </div>
+                    <div class="absolute bottom-10 -left-8 w-20 h-20 neu-convex rounded-full flex items-center justify-center z-20 floating-element"
+                        style="animation-delay: 2s;">
+                        <span class="text-2xl font-bold text-gray-600">98%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- JTBD / Features Section -->
+    <section id="features" class="py-24 bg-transparent relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-700 mb-4">No es un curso más. <br>Es tu laboratorio
+                    de errores.</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">La teoría se olvida. La experiencia se queda. RolPlay EDU te
+                    permite vivir situaciones reales antes de que cuesten dinero real.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- JTBD 1 -->
+                <div class="neu-flat p-8 rounded-3xl group hover:bg-gray-100 transition duration-500">
+                    <div
+                        class="w-14 h-14 rounded-2xl neu-convex text-blue-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-700 mb-3">Falla tranquilo</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        En el mundo real, un error te cuesta el empleo. Aquí, solo te cuesta puntos. Experimenta las
+                        peores decisiones para entender por qué son malas.
+                    </p>
+                </div>
+
+                <!-- JTBD 2 -->
+                <div
+                    class="neu-flat p-8 rounded-3xl group hover:bg-gray-100 transition duration-500 transform lg:-translate-y-4">
+                    <div
+                        class="w-14 h-14 rounded-2xl neu-convex text-green-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-700 mb-3">Feedback Instantáneo</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Tu instructor está ocupado. Nuestra IA no. Recibe análisis detallado de tu perfil de liderazgo y
+                        comunicación segundos después de terminar.
+                    </p>
+                </div>
+
+                <!-- JTBD 3 -->
+                <div class="neu-flat p-8 rounded-3xl group hover:bg-gray-100 transition duration-500">
+                    <div
+                        class="w-14 h-14 rounded-2xl neu-convex text-orange-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-700 mb-3">Sin Excusas</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        ¿No tienes internet? No importa. La versión Offline te permite seguir entrenando en cualquier
+                        lugar. Tu progreso se sincroniza cuando vuelvas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="py-24 relative overflow-hidden" x-data="simulationDemo">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <span class="text-green-600 font-bold tracking-widest text-sm uppercase">Pruébalo ahora</span>
+                <h2 class="text-3xl font-bold text-gray-700 mt-2">Toma una decisión difícil</h2>
+            </div>
+
+            <!-- Simulation Card (Video Replacement) -->
+            <div
+                class="neu-flat rounded-3xl p-4 md:p-6 transition-all duration-300 hover:shadow-2xl relative overflow-hidden">
+                <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-inner bg-gray-900">
+                    <video class="w-full h-full object-cover" controls playsinline>
+                        <source src="assets/bienvenido.mp4" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+
+                    <!-- Badge -->
+                    <div
+                        class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg pointer-events-none">
+                        VERSIÓN ONLINE
+                    </div>
+                </div>
+
+                <a href="./online"
+                    class="block mt-6 text-center group hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-bold text-gray-700 group-hover:text-green-600 transition">Ingresar al
+                        Simulador</h3>
+                    <p class="text-gray-500 mt-2">Haz clic para comenzar tu experiencia en línea</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Background Elements -->
+        <div
+            class="absolute top-1/2 left-0 w-64 h-64 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob">
+        </div>
+        <div
+            class="absolute top-1/2 right-0 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000">
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-700 mb-4">Historias Reales</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Lo que dicen quienes ya están entrenando su futuro
+                    profesional.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="neu-flat p-8 rounded-3xl relative">
+                    <div class="absolute -top-6 left-8 text-6xl text-green-200 font-serif leading-none">“</div>
+                    <p class="text-gray-600 italic mb-6 relative z-10">
+                        En mi primera entrevista me preguntaron cómo manejaría un conflicto. Gracias al simulador,
+                        respondí con un caso práctico que había practicado ayer. ¡Me contrataron!
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full neu-convex bg-gray-200 flex items-center justify-center text-gray-500 font-bold">
+                            JP
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700">Juan Pérez</h4>
+                            <span class="text-xs text-green-600 font-medium">Aprendiz ADSO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="neu-flat p-8 rounded-3xl relative">
+                    <div class="absolute -top-6 left-8 text-6xl text-green-200 font-serif leading-none">“</div>
+                    <p class="text-gray-600 italic mb-6 relative z-10">
+                        Mis aprendices solían tener miedo a equivocarse. Con RolPlay, compiten por ver quién resuelve
+                        mejor los conflictos. El cambio de actitud es total.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full neu-convex bg-gray-200 flex items-center justify-center text-gray-500 font-bold">
+                            ML
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700">Maria López</h4>
+                            <span class="text-xs text-green-600 font-medium">Instructora Ética</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="neu-flat p-8 rounded-3xl relative">
+                    <div class="absolute -top-6 left-8 text-6xl text-green-200 font-serif leading-none">“</div>
+                    <p class="text-gray-600 italic mb-6 relative z-10">
+                        La versión offline es una salvación. Puedo practicar en el bus camino al centro de formación sin
+                        gastar mis datos. Es un juego, pero aprendes en serio.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full neu-convex bg-gray-200 flex items-center justify-center text-gray-500 font-bold">
+                            CR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700">Carlos Ruiz</h4>
+                            <span class="text-xs text-green-600 font-medium">Aprendiz Gestión Admin.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Footer -->
+    <footer class="bg-gray-200 pt-20 pb-10 rounded-t-[3rem] mt-20 relative shadow-inner">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="assets/img/logo.png" alt="RolPlay EDU" class="h-12 w-auto">
+                        <span class="text-2xl font-bold tracking-tight text-gray-700">RolPlay <span
+                                class="text-green-600">EDU</span></span>
+                    </div>
+                    <div class="flex items-start gap-4 mb-6">
+                        <img src="assets/img/sena.png" alt="SENA Logo"
+                            class="h-16 w-auto opacity-80 mix-blend-multiply">
+                        <p class="text-gray-500 text-sm">
+                            <strong>Producto Técnico Pedagógico</strong><br>
+                            Centro Agropecuario Buga<br>
+                            Regional Valle<br>
+                            <span class="text-xs mt-2 block">Desarrollando el talento humano del futuro.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-gray-700 mb-4">Plataforma</h4>
+                    <ul class="space-y-3 text-gray-500">
+                        <li><a href="#" class="hover:text-green-600 transition">Simulador Online</a></li>
+                        <li><a href="assets/offline.zip" class="hover:text-green-600 transition">Descargar Offline</a>
+                        </li>
+                        <li><a href="./offline" class="hover:text-green-600 transition">Versión Lite</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-gray-700 mb-4">Legal</h4>
+                    <ul class="space-y-3 text-gray-500">
+                        <li><a href="terms.html" class="hover:text-green-600 transition">Términos de Uso</a></li>
+                        <li><a href="privacy.html" class="hover:text-green-600 transition">Privacidad</a></li>
+                        <li><a href="credits.html" class="hover:text-green-600 transition">Créditos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <div class="flex flex-col md:flex-row items-center gap-2">
+                    <p>&copy; 2026 RolPlay EDU.</p>
+                    <span class="hidden md:inline">|</span>
+                    <p>Instructor: <strong>Migdonio Dediego</strong></p>
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="https://github.com/mig-conversaciones/" target="_blank"
+                        class="neu-icon-btn w-10 h-10 text-gray-500 hover:text-green-600"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/migdejar/" target="_blank"
+                        class="neu-icon-btn w-10 h-10 text-gray-500 hover:text-green-600"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Animation specifics inline for simplicity */
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+    </style>
+</body>
+
+</html>
